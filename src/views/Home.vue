@@ -84,6 +84,10 @@ export default {
       this.todoList.splice(index, 1);
       localStorage.setItem("todo", JSON.stringify(this.todoList));
     },
+    removeAllTodo() {
+      this.todoList = [];
+      localStorage.setItem("todo", JSON.stringify(this.todoList));
+    },
   },
   created() {
     let localStorageTodoList = localStorage.getItem("todo");
