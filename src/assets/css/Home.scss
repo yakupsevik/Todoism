@@ -148,14 +148,26 @@ footer a:hover {
   color: #252525;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 415px) {
   .container {
-    width: 360px !important;
+    width: 380px !important;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .container {
+    width: 350px !important;
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 320px) {
   .container {
     width: 310px !important;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .container {
+    width: 270px !important;
   }
 }

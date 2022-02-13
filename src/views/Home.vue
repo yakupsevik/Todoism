@@ -23,7 +23,7 @@
         <button
           type="submit"
           class="submit_btn remove_btn"
-          @click="removeAllTodo()"
+          @click="removeTodos()"
         >
           <span>Remove Todos</span>
         </button>
@@ -84,7 +84,7 @@ export default {
       this.todoList.splice(index, 1);
       localStorage.setItem("todo", JSON.stringify(this.todoList));
     },
-    removeAllTodo() {
+    removeTodos() {
       this.todoList = [];
       localStorage.setItem("todo", JSON.stringify(this.todoList));
     },
