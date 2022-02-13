@@ -1,4 +1,4 @@
-# twitter-clone-frontend
+# Todoism | Vue.js
 
 ## Project setup
 ```
