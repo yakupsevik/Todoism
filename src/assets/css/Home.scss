@@ -1,0 +1,149 @@
+.todo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  width: 480px !important;
+  height: 340px !important;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: rgba(255, 255, 255, 1) 0px 0px 24px 2px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title {
+  margin-top: 15px;
+}
+
+.add_todo {
+  display: flex;
+  width: 85%;
+}
+
+.todoError {
+  color: rgb(255, 0, 106);
+}
+
+.todo_input {
+  border-bottom: 3px dashed rgb(255, 0, 106);
+  padding: 5px 0 3px;
+  background: transparent;
+  width: 100%;
+  outline: none;
+}
+
+.submit_btn {
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  transform: rotate(4deg);
+  border-radius: 6px;
+  transition: $transition;
+  margin-left: 10px;
+}
+
+.remove_btn {
+  transform: none;
+  margin-top: 10px;
+}
+
+.submit_btn::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scaleY(1.1);
+  border: 2px solid rgb(87, 87, 87);
+  border-radius: inherit;
+  transform-origin: top;
+  background-image: url("../images/cross.png");
+  transition: transition;
+}
+
+.submit_btn:active {
+  transform: translateY(4px);
+  padding-bottom: 0;
+}
+
+.submit_btn:active::before {
+  transform: scaleY(1);
+}
+
+.submit_btn span {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  padding: 0.34em 0.84em;
+  border: 2px solid rgb(87, 87, 87);
+  border-radius: inherit;
+  background-image: linear-gradient(rgb(255, 0, 106), rgb(255, 0, 128));
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.todoList {
+  margin-top: 15px;
+  width: 100%;
+  overflow: auto;
+  height: 100%;
+}
+
+.todoList ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+  width: 100%;
+}
+
+.todoList li {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.todoList i {
+  color: rgb(255, 0, 106);
+  transition: 300ms all;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.todoList i:hover {
+  text-shadow: rgba(255, 0, 106, 0.5) 0px 0px 5px;
+}
+
+.footer {
+  margin-bottom: 15px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 10pt;
+  font-weight: 500;
+}
+
+footer a {
+  transition: 300ms all;
+}
+
+footer a:hover {
+  color: #252525;
+}
