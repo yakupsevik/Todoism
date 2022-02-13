@@ -28,5 +28,6 @@ export default {
 #app {
   background-image: linear-gradient(rgb(255, 0, 106), rgb(255, 0, 128));
   background-repeat: no-repeat;
+  overflow: hidden !important;
 }
 </style>
